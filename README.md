@@ -1,10 +1,16 @@
+# A comprehensive speed tracking and analysis tool optimized for Sri Lankan ISPs. Monitor trends, log WiFi performance, and identify speed drops over time.
+
+
+
+
+
 <div align="center">
 <img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 </div>
 
 
 
-#Monitor your internet performance, identify ISP throttle patterns, and optimize your connectivity in Sri Lanka.
+# Monitor your internet performance, identify ISP throttle patterns, and optimize your connectivity in Sri Lanka.
 
 # Run and deploy your AI Studio app
 
