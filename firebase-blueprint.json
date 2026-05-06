@@ -1,0 +1,57 @@
+{
+  "entities": {
+    "SpeedTest": {
+      "title": "Speed Test",
+      "description": "A single internet speed test result",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "downloadSpeed": { "type": "number", "description": "Download speed in Mbps" },
+        "uploadSpeed": { "type": "number", "description": "Upload speed in Mbps" },
+        "ping": { "type": "number", "description": "Latency in ms" },
+        "unloadedPing": { "type": "number" },
+        "loadedPing": { "type": "number" },
+        "wifiName": { "type": "string" },
+        "isp": { "type": "string" },
+        "signalStrength": { "type": "number", "description": "Signal strength percentage 0-100" },
+        "distance": { "type": "number", "description": "Distance from router in meters" },
+        "location": {
+          "type": "object",
+          "properties": {
+            "lat": { "type": "number" },
+            "lng": { "type": "number" },
+            "city": { "type": "string" }
+          }
+        },
+        "timestamp": { "type": "string", "format": "date-time" },
+        "isManual": { "type": "boolean" }
+      },
+      "required": ["userId", "downloadSpeed", "timestamp"]
+    },
+    "UserConfig": {
+      "title": "User Config",
+      "description": "User specific settings for speed tracking",
+      "type": "object",
+      "properties": {
+        "userId": { "type": "string" },
+        "testInterval": { "type": "number", "description": "Hours between automatic tests (0 = manual only)" },
+        "lastRun": { "type": "string", "format": "date-time" },
+        "parallelConnections": { "type": "number" },
+        "testDuration": { "type": "number" },
+        "measureLoadedLatency": { "type": "boolean" },
+        "alwaysShowAllMetrics": { "type": "boolean" }
+      },
+      "required": ["userId"]
+    }
+  },
+  "firestore": {
+    "speed_tests/{testId}": {
+      "schema": "SpeedTest",
+      "description": "Log of all speed tests"
+    },
+    "user_configs/{userId}": {
+      "schema": "UserConfig",
+      "description": "User preferences and state"
+    }
+  }
+}

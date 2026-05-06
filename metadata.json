@@ -1,0 +1,12 @@
+{
+  "name": "LankaSpeed Pulse",
+  "description": "A comprehensive speed tracking and analysis tool optimized for Sri Lankan ISPs. Monitor trends, log WiFi performance, and identify speed drops over time.",
+  "requestFramePermissions": [
+    "geolocation"
+  ],
+  "majorCapabilities": [
+    "speed-tracking",
+    "isp-analysis",
+    "data-export"
+  ]
+}
